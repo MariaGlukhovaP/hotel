@@ -1,0 +1,402 @@
+:root {
+  --bg-color-1: #555555;
+  --bg-color-2: #818181;
+  --marg: 5em 2em 2em 2em;
+  --rad: 10px;
+}
+
+html,
+header,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: "Fira Sans Condensed", serif;
+  font-weight: 500;
+  font-style: normal;
+  text-decoration: none;
+}
+
+h1 {
+  font-family: "Merriweather", serif;
+}
+
+h2 {
+  font-family: "Ramaraja";
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: white;
+  margin: 1em;
+  text-decoration: none;
+}
+
+/* Логотип */
+.logo {
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 100px;
+  height: 100px;
+  padding: 8px;
+  margin: 8px;
+}
+
+/* Шапка полностью */
+.header-container {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Шапка верхняя */
+.header-content {
+  width: 100vw;
+}
+
+.header-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg-color-1);
+}
+
+.phone {
+  display: flex;
+  align-items: center;
+}
+
+.phone-icon {
+  width: 30px;
+  height: 30px;
+}
+
+/* Шапка нижняя */
+.header-menu {
+  background-color: var(--bg-color-2);
+  max-height: 600px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+  max-height: 100%;
+  margin: 0;
+  padding: 16px;
+}
+
+.menu > li {
+  margin: 0 0.5rem;
+  overflow: hidden;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button-container {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.menu-button {
+  background-color: #ffffff;
+  display: block;
+  height: 4px;
+  position: relative;
+  width: 40px;
+  border-radius: 5px;
+}
+
+.menu-button::before,
+.menu-button::after {
+  content: "";
+  background-color: #ffffff;
+  display: block;
+  position: absolute;
+  transition: all 0.3s;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.menu-button::before {
+  top: 12px;
+}
+
+.menu-button::after {
+  top: -12px;
+}
+
+/* Описание отеля */
+.provider-container {
+  margin: var(--marg);
+  text-align: left;
+}
+
+.provider-information {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.provider-img {
+  position: relative;
+  min-width: 290px;
+  flex: 1 2 290px;
+  height: 100%;
+
+  background-image: url(img/info-banner.jpg);
+  background-repeat: no-repeat;
+  border-radius: var(--rad);
+  max-width: 50%;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.provider-description-text {
+  padding: 0 1em 1em 2em;
+  width: 50%;
+  line-height: 24px;
+  flex: 1 1 290px;
+  word-wrap: break-word;
+}
+
+/* Условия проживания */
+.accommodation-conditions-container {
+  margin: var(--marg);
+}
+
+td {
+  padding: 16px 16px 16px 0;
+}
+
+.table-value {
+  font-weight: bold;
+}
+
+.accommodation-conditions-table td {
+  border-top: 1px solid #dedede;
+}
+
+.accommodation-conditions-title {
+  padding-bottom: 16px;
+}
+
+/* Примеры номеров */
+.rooms-container {
+  margin: var(--marg);
+}
+
+.rooms-card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card-1,
+.card-2,
+.card-3 {
+  background-color: #fff;
+  width: 300px;
+  height: 450px;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 5px 5px 10px #a6a1a1;
+
+  margin: auto;
+  margin-top: 50px;
+}
+
+.room-1-img,
+.room-2-img,
+.room-3-img {
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.btn-keeper {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.card-btn {
+  background-color: var(--bg-color-2);
+  padding: 10px 18px;
+  text-decoration: none;
+  color: #eee;
+  border-radius: 10px;
+  transition: background-color 0.3s linear;
+}
+
+.card-btn:hover {
+  background-color: var(--bg-color-1);
+}
+/* Отзывы */
+.slider {
+  max-width: 650px;
+  width: 100%;
+}
+
+.slider > .slider-item {
+  display: none;
+}
+
+.slider > .slider-item > p.center {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.slider input[type="radio"] {
+  display: none;
+}
+
+.slider > input[type="radio"]:checked + .slider-item {
+  display: block;
+}
+
+.slider,
+.slider-buttons {
+  text-align: center;
+}
+
+.slider .slider-buttons label {
+  background-color: #ccc;
+  border-radius: 15px;
+  cursor: pointer;
+  display: inline-block;
+  height: 15px;
+  margin: 0 5px;
+  width: 15px;
+}
+.slider .slider-buttons label:hover {
+  background-color: #dedede;
+}
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reviews-container {
+  margin: var(--marg);
+}
+
+/* Шапка */
+.footer-container {
+  background-color: #a1a1a1;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.adress {
+  display: flex;
+}
+
+.img-adress {
+  width: 20px;
+  height: 20px;
+}
+
+.payment-link {
+  color: black;
+}
+
+@media (max-width: 448px) {
+  html {
+    font-size: 0.8em;
+  }
+  .card-1,
+  .card-2,
+  .card-3 {
+    height: 380px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-bar {
+    display: none;
+  }
+
+  .logo-img {
+    width: 5em;
+    height: 5em;
+    padding: 0;
+  }
+
+  .logo {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    padding: 30px 0;
+    background-color: var(--bg-color-2);
+    text-align: left;
+  }
+
+  #menu-toggle:checked ~ .menu {
+    display: block;
+    max-height: 100%;
+    transition: all 0.5s linear;
+  }
+
+  .menu-button-container {
+    display: block;
+    padding: 40px;
+  }
+
+  .menu-item {
+    padding: 8px;
+  }
+
+  #menu-toggle:checked ~ .menu-button-container .menu-button {
+    background-color: transparent;
+  }
+
+  #menu-toggle:checked ~ .menu-button-container .menu-button::before {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+
+  #menu-toggle:checked ~ .menu-button-container .menu-button::after {
+    transform: rotate(45deg);
+    top: 0;
+  }
+
+  .provider-img {
+    max-width: 100%;
+  }
+
+  .provider-description-text {
+    padding: 2em 1em 1em 0;
+  }
+
+  .adress {
+    padding-top: 20px;
+  }
+}
+
+/* Шрифты */
