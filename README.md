@@ -1,2 +1,2 @@
 # Учебный проект сайта для отеля
-!(https://github.com/MariaGlukhovaP/HotelSite/raw/main/screenshot.jpg)
+!(https://github.com/MariaGlukhovaP/TheHotel/raw/main/screenshot.jpg)
